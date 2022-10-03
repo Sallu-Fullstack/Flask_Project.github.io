@@ -1,2 +1,3 @@
-# Flask_Project.github.io
-Student Database Management System Project Created with Python And Flask 
+# Student Database Management System
+A DBMS Project created with Python and SQL in Flask Framework. 
+Imported Libraries (flask and pymysql)

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flask Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <br/>
+      <h1>Student Database Management System</h1>
+      <br/>
+      <a href="http://127.0.0.1:5000/add/" class="btn btn-primary">Add Student</a>
+    </div>
+    <div class="container">
+        <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Email</th>
+                <th scope="col">Birth Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in data %}
+              <tr>
+                <td>{{person[0]}}</td>
+                <td>{{person[1]}}</td>
+                <td>{{person[2]}}</td>
+                <td>{{person[3]}}</td>
+                <td>{{person[4]}}</td>
+                <td>{{person[5]}}</td>
+                <td>
+                    <a href="http://127.0.0.1:5000/edit?id={{person[0]}}" class="btn btn-warning">Edit</a>
+                    <a href="http://127.0.0.1:5000/delete?id={{person[0]}}" class="btn btn-danger">Delete</a>
+                </td>
+              </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -19,6 +19,15 @@
    * Delete student information from the database
    * View all students information in the database
 # Technologies Used
-
+ * Python
+ * Flask
+ * HTML
+ * CSS
+ * MySQL: PyMySQL
+ * Bootstrap
+ 
+# Author
+ ### Mohammed Salman
+ ### WhatsApp : +917871687174📱
 
 

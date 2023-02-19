@@ -6,7 +6,7 @@
  - View a list of all students in the database
  
  # Preview Application Live:
-**Link: Sallu1studentDB.pythonanywhere.com**
+**Link: http://sallu1studentdb.pythonanywhere.com/**
 
 # Getting Started
  1. Install Python 3.x on your machine.

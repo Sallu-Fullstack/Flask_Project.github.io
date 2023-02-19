@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
+from datetime import timedelta
 import pymysql
 
 con=None
@@ -6,6 +7,7 @@ cur=None
 
 app=Flask(__name__)
 app.secret_key = "key_secret"
+app.permanent_session_lifetime = timedelta(minutes=10)
 
 def connectToDb():
     global con, cur
@@ -68,7 +70,10 @@ def index():
     #return "<h1>Flask Programming!<h1>"
     #data is tuple of tuples
     data=getAllPersonData()
-    flash('This Project is Not Mobile Responsive! Please Avoid viewing in Mobile')
+
+    if not session.get('flash_displayed'):
+        flash('This Project is Not Mobile Responsive! Please Avoid viewing in Mobile')
+        session['flash_displayed']=True
     return render_template("index.html", data=data)
 @app.route("/add/", methods=['GET', 'POST'])
 def addPerson():

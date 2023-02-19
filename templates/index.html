@@ -9,6 +9,13 @@
   <body>
     <div class="container">
       <br/>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <script>
+            alert("{{ messages[0] }}");
+          </script>
+        {% endif %}
+      {% endwith %}
       <h1>Student Database Management System</h1>
       <br/>
       <a href="http://127.0.0.1:5000/add/" class="btn btn-primary">Add Student</a>
@@ -26,17 +33,17 @@
             </tr>
         </thead>
         <tbody>
-            {% for person in data %}
+            {% for student in data %}
               <tr>
-                <td>{{person[0]}}</td>
-                <td>{{person[1]}}</td>
-                <td>{{person[2]}}</td>
-                <td>{{person[3]}}</td>
-                <td>{{person[4]}}</td>
-                <td>{{person[5]}}</td>
+                <td>{{student[0]}}</td>
+                <td>{{student[1]}}</td>
+                <td>{{student[2]}}</td>
+                <td>{{student[3]}}</td>
+                <td>{{student[4]}}</td>
+                <td>{{student[5]}}</td>
                 <td>
-                    <a href="http://127.0.0.1:5000/edit?id={{person[0]}}" class="btn btn-warning">Edit</a>
-                    <a href="http://127.0.0.1:5000/delete?id={{person[0]}}" class="btn btn-danger">Delete</a>
+                    <a href="http://127.0.0.1:5000/edit?id={{student[0]}}" class="btn btn-warning">Edit</a>
+                    <a href="http://127.0.0.1:5000/delete?id={{student[0]}}" class="btn btn-danger">Delete</a>
                 </td>
               </tr>
             {% endfor %}

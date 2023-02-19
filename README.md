@@ -4,6 +4,9 @@
  - Edit or update existing student data
  - Delete students from the database
  - View a list of all students in the database
+ 
+ # Preview Application Live:
+**Link: Sallu1studentDB.pythonanywhere.com**
 
 # Getting Started
  1. Install Python 3.x on your machine.

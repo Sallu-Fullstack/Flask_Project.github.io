@@ -5,7 +5,7 @@
  - Delete students from the database
  - View a list of all students in the database
  
- # Preview Application Live:
+ # Project is Live View Now:
 **Link: http://sallu1studentdb.pythonanywhere.com/**
 
 # Getting Started
